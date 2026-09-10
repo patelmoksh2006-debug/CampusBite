@@ -1,0 +1,12 @@
+{
+  "name": "campusbite",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CampusBite — Full-Stack Automated Campus Canteen Platform",
+  "scripts": {
+    "start:backend": "cd backend && node src/server.js",
+    "dev:backend": "cd backend && node --watch src/server.js",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build:frontend": "cd frontend && npm run build"
+  }
+}

@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased selection:bg-indigo-600 selection:text-white;
+    overflow-x: hidden;
+  }
+
+  button {
+    @apply transition-all duration-150;
+  }
+
+  button:active {
+    transform: scale(0.98);
+  }
+}
+
+
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Print Rules for Statutory Tax Invoice (Section 31 CGST Act) */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 11pt;
+  }
+
+  .no-print, nav, footer, button, .sticky, header {
+    display: none !important;
+  }
+
+  .printable-invoice {
+    display: block !important;
+    width: 100% !important;
+    box-shadow: none !important;
+    border: 1px solid #94a3b8 !important;
+    margin: 0 !important;
+    padding: 20px !important;
+  }
+
+  @page {
+    margin: 1cm;
+    size: portrait;
+  }
+}
