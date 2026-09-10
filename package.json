@@ -9,5 +9,9 @@
     "dev:backend": "cd backend && node --watch src/server.js",
     "dev:frontend": "cd frontend && npm run dev",
     "build:frontend": "cd frontend && npm run build"
+    start": "node index.js"
+    "start": "node server.js"
+    "start": "node src/app.js"
+    "start": "node src/server.js
   }
 }
